@@ -1,3 +1,9 @@
+print '\n >>> Loadaing texts and libraries for task 9-15. Please wait fev sec.<<<'
+import nltk
+from nltk.book import *
+from nltk.probability import *
+print '>>> Libraries and texts for task 9-16 had been loaded. <<<'
+print '\n'
 
 print '>>> task 1 <<<'
 
@@ -31,29 +37,18 @@ while True:
 print '\n'
 
 print '\n >>> task 7 <<<'
-print "Are all symbols in your name are lower? "
-print str1.islower()
-print '\n'
-c = []
-c = sorted(set([w.lower() for w in str1]))
+c=[]
+sorted(set([w.lower() for w in text1]))
 print "If you use 'sorted(set ...' you will see this: "
+c.append(w)
 print c
 print '\n'
-c = sorted([a.lower() for a in set(str1)])
+a=[]
+sorted([w.lower() for w in set(text1)])
 print "And if you want to use 'sorted(... set(...' you will see this: "
-print c
-print '\n'
-c = sorted([a.lower() for a in str1])
-print "Using 'sorted' method only gives: "
-print c
-print '\n'
+a.append(w)
+print a
 
-print '\n >>> Loadaing texts and libraries for task 9-15. Please wait fev sec.<<<'
-import nltk
-from nltk.book import *
-from nltk.probability import *
-print '>>> Libraries and texts for task 9-16 had been loaded. <<<'
-print '\n'
 print '\n >>> task 9 <<<'
 f = []
 for w in text5:
@@ -86,7 +81,7 @@ while True:
 
 while True:
     try:
-        a = raw_input ("\n Oh. 'chat' is the most characterizes word in the text5. \nPlease enter fdist['chat'] to see how many word 'chat'")
+        a = raw_input ("\n Oh. 'chat' is the most meaningful word in text5. \nPlease enter fdist['chat'] to see how many word 'chat'")
         if a == "fdist['chat']":
             print (fdist['chat'])
             break
@@ -110,7 +105,7 @@ while True:
 t = fdist.hapaxes()
 while True:
     try:
-        a = raw_input ("\n Type 't' to show words which meet only once: ")
+        a = raw_input ("\n Type 't' to see words which meet only once: ")
         if a == 't':
             print t
             break
